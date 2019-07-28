@@ -8,8 +8,27 @@
 
 import Foundation
 
-class TumblrImage: Codable {
-    
-    private (set) var id: String
-    private (set) var name: String
+struct DataResponse: Codable {
+    private (set) var meta: Meta
+    private (set) var response: [Response]
+}
+
+struct Meta: Codable {
+    private (set) var msg: String
+    private (set) var status: Int
+}
+
+struct Response: Codable {
+    private (set) var id: Double
+    private (set) var photos: [Photos]
+}
+
+struct Photos: Codable {
+    private (set) var original_size: TumblrImage
+}
+
+struct TumblrImage: Codable {
+    private (set) var url: String
+    private (set) var width: Int
+    private (set) var height: Int
 }

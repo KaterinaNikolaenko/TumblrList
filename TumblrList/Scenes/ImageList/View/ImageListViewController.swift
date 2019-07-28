@@ -35,7 +35,7 @@ class ImageListViewController: BaseTableViewController {
         
         self.configure()
         
-        self.interactor.getData()
+        self.interactor.getData(searchText: "")
     }
     
     //MARK: Configuration

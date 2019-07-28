@@ -29,6 +29,9 @@
 		06CED3BD22EDB2A4005EDEC6 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06CED3BC22EDB2A4005EDEC6 /* SearchView.xib */; };
 		06CED3BF22EDB4CC005EDEC6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3BE22EDB4CC005EDEC6 /* UIColor.swift */; };
 		06CED3C122EDB7ED005EDEC6 /* XibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3C022EDB7ED005EDEC6 /* XibLoadable.swift */; };
+		06CED3C522EDBE7B005EDEC6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3C422EDBE7B005EDEC6 /* NetworkManager.swift */; };
+		06CED3C722EDBE8C005EDEC6 /* NetworkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3C622EDBE8C005EDEC6 /* NetworkModels.swift */; };
+		06CED3C922EDE638005EDEC6 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3C822EDE638005EDEC6 /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		06CED3BC22EDB2A4005EDEC6 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		06CED3BE22EDB4CC005EDEC6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		06CED3C022EDB7ED005EDEC6 /* XibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibLoadable.swift; sourceTree = "<group>"; };
+		06CED3C422EDBE7B005EDEC6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		06CED3C622EDBE8C005EDEC6 /* NetworkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModels.swift; sourceTree = "<group>"; };
+		06CED3C822EDE638005EDEC6 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +94,8 @@
 		06CED37A22EDAD80005EDEC6 /* TumblrList */ = {
 			isa = PBXGroup;
 			children = (
+				06CED3C222EDBE27005EDEC6 /* Utilities */,
 				06CED3B822EDB26F005EDEC6 /* Views */,
-				06CED3A622EDB057005EDEC6 /* Factories */,
 				06CED3A522EDB04E005EDEC6 /* Entities */,
 				06CED39F22EDAFB5005EDEC6 /* Protocols */,
 				06CED39822EDAF5F005EDEC6 /* Extensions */,
@@ -267,6 +273,25 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		06CED3C222EDBE27005EDEC6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3C322EDBE3C005EDEC6 /* Network */,
+				06CED3A622EDB057005EDEC6 /* Factories */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		06CED3C322EDBE3C005EDEC6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3C422EDBE7B005EDEC6 /* NetworkManager.swift */,
+				06CED3C622EDBE8C005EDEC6 /* NetworkModels.swift */,
+				06CED3C822EDE638005EDEC6 /* ApiService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,9 +364,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06CED3C722EDBE8C005EDEC6 /* NetworkModels.swift in Sources */,
+				06CED3C522EDBE7B005EDEC6 /* NetworkManager.swift in Sources */,
 				06CED3AF22EDB0B6005EDEC6 /* ImageListViewController.swift in Sources */,
 				06CED39C22EDAF88005EDEC6 /* TableViewDataSource.swift in Sources */,
 				06CED3B122EDB0D5005EDEC6 /* ImageListDataSource.swift in Sources */,
+				06CED3C922EDE638005EDEC6 /* ApiService.swift in Sources */,
 				06CED3C122EDB7ED005EDEC6 /* XibLoadable.swift in Sources */,
 				06CED39A22EDAF6E005EDEC6 /* UIView.swift in Sources */,
 				06CED3B322EDB105005EDEC6 /* ImageListPresenter.swift in Sources */,
