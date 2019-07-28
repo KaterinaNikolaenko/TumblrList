@@ -33,7 +33,7 @@ extension ImageListInteractor: ImageListInteractorProtocol {
     
     func getData(searchText: String) {
         
-        apiService.getImages(searchText: searchText) { [weak self] (result) in
+        self.apiService.getImages(searchText: searchText) { [weak self] (result) in
             guard let strongSelf = self else {
                 return
             }

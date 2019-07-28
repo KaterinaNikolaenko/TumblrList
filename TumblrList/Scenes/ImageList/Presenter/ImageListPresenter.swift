@@ -42,8 +42,8 @@ extension ImageListPresenter: ImageListPresenterProtocol {
         
         var images: [TumblrImage] = []
         for item in response {
-            if item.photos.count > 0 {
-                images.append(item.photos.first!.original_size)
+            if (item.photos?.count ?? 0) > 0 {
+                images.append(item.photos!.first!.original_size)
             }
         }
         

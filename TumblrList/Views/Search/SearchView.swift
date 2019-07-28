@@ -14,7 +14,7 @@ protocol SearchProtocol: class {
 
 class SearchView: UIView, XibLoadable {
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet private weak var textField: UITextField!
     
     var contentView: UIView?
     weak var delegate: SearchProtocol?

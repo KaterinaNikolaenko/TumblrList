@@ -20,7 +20,7 @@ struct Meta: Codable {
 
 struct Response: Codable {
     private (set) var id: Double
-    private (set) var photos: [Photo]
+    private (set) var photos: [Photo]?
 }
 
 struct Photo: Codable {

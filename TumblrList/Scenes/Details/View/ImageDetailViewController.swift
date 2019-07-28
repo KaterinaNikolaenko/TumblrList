@@ -11,10 +11,11 @@ import UIKit
 class ImageDetailViewController: BaseViewController {
 
     //UI
-    @IBOutlet weak var mainImageView: CustomUIImageView!
+    @IBOutlet private weak var mainImageView: CustomUIImageView!
     
     private var tumblrImage: TumblrImage!
     
+    //MARK: Life Cycle
     override func viewDidLoad() {
         
         super.viewDidLoad()

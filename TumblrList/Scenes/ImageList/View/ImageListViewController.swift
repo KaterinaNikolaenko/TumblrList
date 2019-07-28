@@ -110,6 +110,7 @@ extension ImageListViewController: ImageListViewProtocol {
         
         self.images = images
         self.dataSource.set(items: self.images)
+        self.removeLoadingScreen()
         self.tableView.reloadData()
     }
     
@@ -117,6 +118,7 @@ extension ImageListViewController: ImageListViewProtocol {
         
         self.images = []
         self.dataSource.set(items: self.images)
+        self.removeLoadingScreen()
         self.tableView.reloadData()
     }
 }
@@ -127,6 +129,7 @@ extension ImageListViewController: SearchProtocol {
     func search(text: String) {
         
         self.interactor.getData(searchText: text)
+        self.setLoadingScreen()
         self.view.endEditing(true)
     }
 }

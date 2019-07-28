@@ -13,7 +13,6 @@ extension UITableView {
     func dequeueCell<T: UITableViewCell & ReuseProtocol>(_ cellClass: T.Type, selectionStyle: UITableViewCell.SelectionStyle) -> T {
         
         let cell = self.dequeueReusableCell(withIdentifier: cellClass.reuseIdentifier) as! T
-        
         cell.selectionStyle = selectionStyle
         
         return cell

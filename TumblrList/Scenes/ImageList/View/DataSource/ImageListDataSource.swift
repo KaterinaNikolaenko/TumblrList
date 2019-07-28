@@ -20,8 +20,8 @@ class ImageListDataSource: TableViewDataSource<TumblrImage> {
     private func imageCell(_ item: TumblrImage, tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueCell(ImageTableViewCell.self, selectionStyle: .none)
-        
         cell.set(mainImage: item.url)
+        
         return cell
     }
     
