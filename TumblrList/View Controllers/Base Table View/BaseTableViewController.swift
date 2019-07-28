@@ -40,9 +40,6 @@ class BaseTableViewController: BaseViewController {
     private func configureTableView() {
         
         self.tableView.separatorStyle = .none
-        
-        //        self.tableView.sectionFooterHeight = 0
-        //        self.tableView.sectionHeaderHeight = 0
     }
     
 }

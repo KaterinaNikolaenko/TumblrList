@@ -18,6 +18,10 @@ class BaseViewController: UIViewController {
         return nil
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .default
+    }
+    
     //MARK: Init
     init() {
         

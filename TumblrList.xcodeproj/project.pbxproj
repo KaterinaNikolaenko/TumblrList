@@ -25,6 +25,10 @@
 		06CED3B322EDB105005EDEC6 /* ImageListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3B222EDB105005EDEC6 /* ImageListPresenter.swift */; };
 		06CED3B522EDB11E005EDEC6 /* ImageListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3B422EDB11E005EDEC6 /* ImageListInteractor.swift */; };
 		06CED3B722EDB155005EDEC6 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3B622EDB155005EDEC6 /* ViewControllersFactory.swift */; };
+		06CED3BB22EDB29A005EDEC6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3BA22EDB29A005EDEC6 /* SearchView.swift */; };
+		06CED3BD22EDB2A4005EDEC6 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06CED3BC22EDB2A4005EDEC6 /* SearchView.xib */; };
+		06CED3BF22EDB4CC005EDEC6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3BE22EDB4CC005EDEC6 /* UIColor.swift */; };
+		06CED3C122EDB7ED005EDEC6 /* XibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3C022EDB7ED005EDEC6 /* XibLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		06CED3B222EDB105005EDEC6 /* ImageListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListPresenter.swift; sourceTree = "<group>"; };
 		06CED3B422EDB11E005EDEC6 /* ImageListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListInteractor.swift; sourceTree = "<group>"; };
 		06CED3B622EDB155005EDEC6 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
+		06CED3BA22EDB29A005EDEC6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		06CED3BC22EDB2A4005EDEC6 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		06CED3BE22EDB4CC005EDEC6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		06CED3C022EDB7ED005EDEC6 /* XibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		06CED37A22EDAD80005EDEC6 /* TumblrList */ = {
 			isa = PBXGroup;
 			children = (
+				06CED3B822EDB26F005EDEC6 /* Views */,
 				06CED3A622EDB057005EDEC6 /* Factories */,
 				06CED3A522EDB04E005EDEC6 /* Entities */,
 				06CED39F22EDAFB5005EDEC6 /* Protocols */,
@@ -160,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				06CED39922EDAF6E005EDEC6 /* UIView.swift */,
+				06CED3BE22EDB4CC005EDEC6 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -168,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				06CED3A022EDAFC6005EDEC6 /* ReuseProtocol.swift */,
+				06CED3C022EDB7ED005EDEC6 /* XibLoadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -239,6 +250,23 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		06CED3B822EDB26F005EDEC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3B922EDB276005EDEC6 /* Search */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06CED3B922EDB276005EDEC6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3BA22EDB29A005EDEC6 /* SearchView.swift */,
+				06CED3BC22EDB2A4005EDEC6 /* SearchView.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06CED3BD22EDB2A4005EDEC6 /* SearchView.xib in Resources */,
 				06CED38622EDAD80005EDEC6 /* LaunchScreen.storyboard in Resources */,
 				06CED38322EDAD80005EDEC6 /* Assets.xcassets in Resources */,
 				06CED38122EDAD80005EDEC6 /* Main.storyboard in Resources */,
@@ -313,15 +342,18 @@
 				06CED3AF22EDB0B6005EDEC6 /* ImageListViewController.swift in Sources */,
 				06CED39C22EDAF88005EDEC6 /* TableViewDataSource.swift in Sources */,
 				06CED3B122EDB0D5005EDEC6 /* ImageListDataSource.swift in Sources */,
+				06CED3C122EDB7ED005EDEC6 /* XibLoadable.swift in Sources */,
 				06CED39A22EDAF6E005EDEC6 /* UIView.swift in Sources */,
 				06CED3B322EDB105005EDEC6 /* ImageListPresenter.swift in Sources */,
 				06CED37E22EDAD80005EDEC6 /* ViewController.swift in Sources */,
+				06CED3BF22EDB4CC005EDEC6 /* UIColor.swift in Sources */,
 				06CED37C22EDAD80005EDEC6 /* AppDelegate.swift in Sources */,
 				06CED3A122EDAFC6005EDEC6 /* ReuseProtocol.swift in Sources */,
 				06CED3A822EDB067005EDEC6 /* TumblrImage.swift in Sources */,
 				06CED3A322EDAFDF005EDEC6 /* BaseNavigationController.swift in Sources */,
 				06CED39E22EDAFA5005EDEC6 /* BaseTableViewCell.swift in Sources */,
 				06CED3B722EDB155005EDEC6 /* ViewControllersFactory.swift in Sources */,
+				06CED3BB22EDB29A005EDEC6 /* SearchView.swift in Sources */,
 				06CED39622EDAF38005EDEC6 /* BaseTableViewController.swift in Sources */,
 				06CED3B522EDB11E005EDEC6 /* ImageListInteractor.swift in Sources */,
 				06CED39422EDAF19005EDEC6 /* BaseViewController.swift in Sources */,

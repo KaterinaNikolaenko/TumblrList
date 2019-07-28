@@ -28,8 +28,9 @@ class BaseNavigationController: UINavigationController {
     
     private func graphicSetup() {
         
-        navigationBar.barTintColor = .lightGray
+        navigationBar.barTintColor = .white
         navigationBar.isTranslucent = false
-        navigationBar.tintColor = .white
+        navigationBar.tintColor = .primaryBlue
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.primaryBlue]
     }
 }

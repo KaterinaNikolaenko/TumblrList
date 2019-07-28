@@ -16,6 +16,8 @@ protocol ImageListViewProtocol: class {
 
 class ImageListViewController: BaseTableViewController {
     
+    @IBOutlet private(set) weak var searchView: SearchView!
+
     private var interactor: ImageListInteractorProtocol!
     
     private lazy var dataSource: ImageListDataSource = {
@@ -39,13 +41,15 @@ class ImageListViewController: BaseTableViewController {
     //MARK: Configuration
     private func configure() {
         
+        self.configureSearchView()
         self.configureTableView()
         self.configureNavigationBar()
     }
     
-    private func configureNavigationBar() {
+    private func configureSearchView() {
         
-        self.title = "Tumblr Images"
+        let searchView = SearchView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
+        self.view.addSubview(searchView)
     }
     
     private func configureTableView() {
@@ -53,9 +57,14 @@ class ImageListViewController: BaseTableViewController {
         self.tableView.backgroundColor = UIColor.white
         self.tableView.dataSource = self.dataSource
         self.tableView.rowHeight = self.view.frame.height / 2 // FIX ME
-        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        self.tableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         
         self.dataSource.registerRequiredCells(for: self.tableView)
+    }
+    
+    private func configureNavigationBar() {
+        
+        self.title = "Tumblr Images"
     }
 }
 
@@ -83,4 +92,10 @@ extension ImageListViewController: ImageListViewProtocol {
     }
 }
 
-
+//MARK: - Search Protocol
+extension ImageListViewController: SearchProtocol {
+    
+    func search(text: String) {
+        
+    }
+}
