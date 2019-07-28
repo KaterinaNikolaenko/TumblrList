@@ -12,6 +12,13 @@
 		06CED38122EDAD80005EDEC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CED37F22EDAD80005EDEC6 /* Main.storyboard */; };
 		06CED38322EDAD80005EDEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CED38222EDAD80005EDEC6 /* Assets.xcassets */; };
 		06CED38622EDAD80005EDEC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CED38422EDAD80005EDEC6 /* LaunchScreen.storyboard */; };
+		06CED39422EDAF19005EDEC6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED39322EDAF19005EDEC6 /* BaseViewController.swift */; };
+		06CED39622EDAF38005EDEC6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED39522EDAF38005EDEC6 /* BaseTableViewController.swift */; };
+		06CED39A22EDAF6E005EDEC6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED39922EDAF6E005EDEC6 /* UIView.swift */; };
+		06CED39C22EDAF88005EDEC6 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED39B22EDAF88005EDEC6 /* TableViewDataSource.swift */; };
+		06CED39E22EDAFA5005EDEC6 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED39D22EDAFA5005EDEC6 /* BaseTableViewCell.swift */; };
+		06CED3A122EDAFC6005EDEC6 /* ReuseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3A022EDAFC6005EDEC6 /* ReuseProtocol.swift */; };
+		06CED3A322EDAFDF005EDEC6 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3A222EDAFDF005EDEC6 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		06CED38222EDAD80005EDEC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06CED38522EDAD80005EDEC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06CED38722EDAD80005EDEC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CED39322EDAF19005EDEC6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		06CED39522EDAF38005EDEC6 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		06CED39922EDAF6E005EDEC6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		06CED39B22EDAF88005EDEC6 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		06CED39D22EDAFA5005EDEC6 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		06CED3A022EDAFC6005EDEC6 /* ReuseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseProtocol.swift; sourceTree = "<group>"; };
+		06CED3A222EDAFDF005EDEC6 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,10 @@
 		06CED37A22EDAD80005EDEC6 /* TumblrList */ = {
 			isa = PBXGroup;
 			children = (
+				06CED39F22EDAFB5005EDEC6 /* Protocols */,
+				06CED39822EDAF5F005EDEC6 /* Extensions */,
+				06CED39722EDAF56005EDEC6 /* Scenes */,
+				06CED38D22EDAECC005EDEC6 /* View Controllers */,
 				06CED37B22EDAD80005EDEC6 /* AppDelegate.swift */,
 				06CED37D22EDAD80005EDEC6 /* ViewController.swift */,
 				06CED37F22EDAD80005EDEC6 /* Main.storyboard */,
@@ -62,6 +80,81 @@
 				06CED38722EDAD80005EDEC6 /* Info.plist */,
 			);
 			path = TumblrList;
+			sourceTree = "<group>";
+		};
+		06CED38D22EDAECC005EDEC6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				06CED39222EDAF00005EDEC6 /* Navigation Controller */,
+				06CED39122EDAEF8005EDEC6 /* Base Table View Cell */,
+				06CED39022EDAEF0005EDEC6 /* Data Source */,
+				06CED38F22EDAEE8005EDEC6 /* Base Table View */,
+				06CED38E22EDAED9005EDEC6 /* Base */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		06CED38E22EDAED9005EDEC6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				06CED39322EDAF19005EDEC6 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		06CED38F22EDAEE8005EDEC6 /* Base Table View */ = {
+			isa = PBXGroup;
+			children = (
+				06CED39522EDAF38005EDEC6 /* BaseTableViewController.swift */,
+			);
+			path = "Base Table View";
+			sourceTree = "<group>";
+		};
+		06CED39022EDAEF0005EDEC6 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				06CED39B22EDAF88005EDEC6 /* TableViewDataSource.swift */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		06CED39122EDAEF8005EDEC6 /* Base Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				06CED39D22EDAFA5005EDEC6 /* BaseTableViewCell.swift */,
+			);
+			path = "Base Table View Cell";
+			sourceTree = "<group>";
+		};
+		06CED39222EDAF00005EDEC6 /* Navigation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3A222EDAFDF005EDEC6 /* BaseNavigationController.swift */,
+			);
+			path = "Navigation Controller";
+			sourceTree = "<group>";
+		};
+		06CED39722EDAF56005EDEC6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		06CED39822EDAF5F005EDEC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				06CED39922EDAF6E005EDEC6 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		06CED39F22EDAFB5005EDEC6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3A022EDAFC6005EDEC6 /* ReuseProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +228,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06CED39C22EDAF88005EDEC6 /* TableViewDataSource.swift in Sources */,
+				06CED39A22EDAF6E005EDEC6 /* UIView.swift in Sources */,
 				06CED37E22EDAD80005EDEC6 /* ViewController.swift in Sources */,
 				06CED37C22EDAD80005EDEC6 /* AppDelegate.swift in Sources */,
+				06CED3A122EDAFC6005EDEC6 /* ReuseProtocol.swift in Sources */,
+				06CED3A322EDAFDF005EDEC6 /* BaseNavigationController.swift in Sources */,
+				06CED39E22EDAFA5005EDEC6 /* BaseTableViewCell.swift in Sources */,
+				06CED39622EDAF38005EDEC6 /* BaseTableViewController.swift in Sources */,
+				06CED39422EDAF19005EDEC6 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VD9T9R724;
 				INFOPLIST_FILE = TumblrList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +393,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = katerina.nikolaenko.com.TumblrList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,6 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VD9T9R724;
 				INFOPLIST_FILE = TumblrList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = katerina.nikolaenko.com.TumblrList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
