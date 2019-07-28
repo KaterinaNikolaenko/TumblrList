@@ -30,4 +30,12 @@ extension ViewControllersFactory {
         
         return navig
     }
+    
+    static func details(_ tumblrImage: TumblrImage) -> ImageDetailViewController {
+        
+        let viewController = ImageDetailViewController()
+        viewController.set(tumblrImage: tumblrImage)
+        
+        return viewController
+    }
 }

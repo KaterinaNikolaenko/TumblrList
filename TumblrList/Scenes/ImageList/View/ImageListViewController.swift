@@ -14,6 +14,12 @@ protocol ImageListViewProtocol: class {
     func displayFailure(_ error: AppError)
 }
 
+private enum Dimensions {
+    static let searchViewHeight: CGFloat = 50
+    static let customScreenWidth: CGFloat = 300
+    static let offset: CGFloat = 10
+}
+
 class ImageListViewController: BaseTableViewController {
     
     @IBOutlet private(set) weak var searchView: SearchView!
@@ -46,7 +52,7 @@ class ImageListViewController: BaseTableViewController {
     
     private func configureSearchView() {
         
-        let searchView = SearchView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
+        let searchView = SearchView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: Dimensions.searchViewHeight))
         searchView.delegate = self
         self.view.addSubview(searchView)
     }
@@ -55,8 +61,8 @@ class ImageListViewController: BaseTableViewController {
         
         self.tableView.backgroundColor = UIColor.white
         self.tableView.dataSource = self.dataSource
-        self.tableView.rowHeight = 200 // FIX ME
-        self.tableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        self.tableView.delegate = self
+        self.tableView.contentInset = UIEdgeInsets(top: Dimensions.searchViewHeight, left: 0, bottom: 0, right: 0)
         
         self.dataSource.registerRequiredCells(for: self.tableView)
     }
@@ -64,6 +70,27 @@ class ImageListViewController: BaseTableViewController {
     private func configureNavigationBar() {
         
         self.title = "Tumblr Images"
+    }
+}
+
+extension ImageListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.navigationController?.pushViewController(ViewControllersFactory.details(images[indexPath.row]), animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return self.calculateCellHeight(tumblrImage: images[indexPath.row])
+    }
+    
+    private func calculateCellHeight(tumblrImage: TumblrImage) -> CGFloat {
+        
+        let ratio = CGFloat(tumblrImage.height) / CGFloat(tumblrImage.width)
+        let newHeight = Dimensions.customScreenWidth * ratio + Dimensions.offset
+        
+        return newHeight
     }
 }
 
@@ -100,5 +127,6 @@ extension ImageListViewController: SearchProtocol {
     func search(text: String) {
         
         self.interactor.getData(searchText: text)
+        self.view.endEditing(true)
     }
 }

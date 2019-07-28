@@ -40,6 +40,7 @@ class BaseTableViewController: BaseViewController {
     private func configureTableView() {
         
         self.tableView.separatorStyle = .none
+        self.tableView.keyboardDismissMode = .onDrag
     }
     
 }

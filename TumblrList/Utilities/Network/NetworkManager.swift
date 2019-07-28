@@ -35,7 +35,6 @@ class NetworkManager {
         var request = URLRequest(url: dataURL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 60)
         request.httpMethod = requestModel.methodType.rawValue
       
-        
         let task = session.dataTask(with: request, completionHandler: { data, response, error in
             
             guard error == nil else {

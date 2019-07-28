@@ -13,7 +13,7 @@ enum Api {
     static let apiKey = "CcEqqSrYdQ5qTHFWssSMof4tPZ89sfx6AXYNQ4eoXHMgPJE03U"
 }
 
-public enum HTTPMethod : String {
+enum HTTPMethod : String {
     case get     = "GET"
     case post    = "POST"
     case put     = "PUT"

@@ -22,11 +22,6 @@ class ImageTableViewCell: BaseTableViewCell {
 //MARK: - Public
 extension ImageTableViewCell {
     
-//    func set(id: String) {
-//
-//        self.id = id
-//    }
-    
     func set(mainImage: String) {
         
         self.mainImageView.imageFromServerURL(urlString: mainImage)
