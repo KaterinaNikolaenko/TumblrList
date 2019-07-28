@@ -19,6 +19,12 @@
 		06CED39E22EDAFA5005EDEC6 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED39D22EDAFA5005EDEC6 /* BaseTableViewCell.swift */; };
 		06CED3A122EDAFC6005EDEC6 /* ReuseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3A022EDAFC6005EDEC6 /* ReuseProtocol.swift */; };
 		06CED3A322EDAFDF005EDEC6 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3A222EDAFDF005EDEC6 /* BaseNavigationController.swift */; };
+		06CED3A822EDB067005EDEC6 /* TumblrImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3A722EDB067005EDEC6 /* TumblrImage.swift */; };
+		06CED3AF22EDB0B6005EDEC6 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3AE22EDB0B6005EDEC6 /* ImageListViewController.swift */; };
+		06CED3B122EDB0D5005EDEC6 /* ImageListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3B022EDB0D5005EDEC6 /* ImageListDataSource.swift */; };
+		06CED3B322EDB105005EDEC6 /* ImageListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3B222EDB105005EDEC6 /* ImageListPresenter.swift */; };
+		06CED3B522EDB11E005EDEC6 /* ImageListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3B422EDB11E005EDEC6 /* ImageListInteractor.swift */; };
+		06CED3B722EDB155005EDEC6 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3B622EDB155005EDEC6 /* ViewControllersFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		06CED39D22EDAFA5005EDEC6 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		06CED3A022EDAFC6005EDEC6 /* ReuseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseProtocol.swift; sourceTree = "<group>"; };
 		06CED3A222EDAFDF005EDEC6 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		06CED3A722EDB067005EDEC6 /* TumblrImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumblrImage.swift; sourceTree = "<group>"; };
+		06CED3AE22EDB0B6005EDEC6 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		06CED3B022EDB0D5005EDEC6 /* ImageListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListDataSource.swift; sourceTree = "<group>"; };
+		06CED3B222EDB105005EDEC6 /* ImageListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListPresenter.swift; sourceTree = "<group>"; };
+		06CED3B422EDB11E005EDEC6 /* ImageListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListInteractor.swift; sourceTree = "<group>"; };
+		06CED3B622EDB155005EDEC6 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,8 @@
 		06CED37A22EDAD80005EDEC6 /* TumblrList */ = {
 			isa = PBXGroup;
 			children = (
+				06CED3A622EDB057005EDEC6 /* Factories */,
+				06CED3A522EDB04E005EDEC6 /* Entities */,
 				06CED39F22EDAFB5005EDEC6 /* Protocols */,
 				06CED39822EDAF5F005EDEC6 /* Extensions */,
 				06CED39722EDAF56005EDEC6 /* Scenes */,
@@ -137,6 +151,7 @@
 		06CED39722EDAF56005EDEC6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				06CED3A422EDB035005EDEC6 /* ImageList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -155,6 +170,73 @@
 				06CED3A022EDAFC6005EDEC6 /* ReuseProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		06CED3A422EDB035005EDEC6 /* ImageList */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3AB22EDB08C005EDEC6 /* Interactor */,
+				06CED3AA22EDB084005EDEC6 /* Presenter */,
+				06CED3A922EDB07B005EDEC6 /* View */,
+			);
+			path = ImageList;
+			sourceTree = "<group>";
+		};
+		06CED3A522EDB04E005EDEC6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3A722EDB067005EDEC6 /* TumblrImage.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		06CED3A622EDB057005EDEC6 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3B622EDB155005EDEC6 /* ViewControllersFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		06CED3A922EDB07B005EDEC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3AD22EDB0A4005EDEC6 /* DataSource */,
+				06CED3AC22EDB095005EDEC6 /* Cells */,
+				06CED3AE22EDB0B6005EDEC6 /* ImageListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06CED3AA22EDB084005EDEC6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3B222EDB105005EDEC6 /* ImageListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		06CED3AB22EDB08C005EDEC6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3B422EDB11E005EDEC6 /* ImageListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		06CED3AC22EDB095005EDEC6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		06CED3AD22EDB0A4005EDEC6 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				06CED3B022EDB0D5005EDEC6 /* ImageListDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,14 +310,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06CED3AF22EDB0B6005EDEC6 /* ImageListViewController.swift in Sources */,
 				06CED39C22EDAF88005EDEC6 /* TableViewDataSource.swift in Sources */,
+				06CED3B122EDB0D5005EDEC6 /* ImageListDataSource.swift in Sources */,
 				06CED39A22EDAF6E005EDEC6 /* UIView.swift in Sources */,
+				06CED3B322EDB105005EDEC6 /* ImageListPresenter.swift in Sources */,
 				06CED37E22EDAD80005EDEC6 /* ViewController.swift in Sources */,
 				06CED37C22EDAD80005EDEC6 /* AppDelegate.swift in Sources */,
 				06CED3A122EDAFC6005EDEC6 /* ReuseProtocol.swift in Sources */,
+				06CED3A822EDB067005EDEC6 /* TumblrImage.swift in Sources */,
 				06CED3A322EDAFDF005EDEC6 /* BaseNavigationController.swift in Sources */,
 				06CED39E22EDAFA5005EDEC6 /* BaseTableViewCell.swift in Sources */,
+				06CED3B722EDB155005EDEC6 /* ViewControllersFactory.swift in Sources */,
 				06CED39622EDAF38005EDEC6 /* BaseTableViewController.swift in Sources */,
+				06CED3B522EDB11E005EDEC6 /* ImageListInteractor.swift in Sources */,
 				06CED39422EDAF19005EDEC6 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
