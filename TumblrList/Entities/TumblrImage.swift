@@ -20,10 +20,10 @@ struct Meta: Codable {
 
 struct Response: Codable {
     private (set) var id: Double
-    private (set) var photos: [Photos]
+    private (set) var photos: [Photo]
 }
 
-struct Photos: Codable {
+struct Photo: Codable {
     private (set) var original_size: TumblrImage
 }
 

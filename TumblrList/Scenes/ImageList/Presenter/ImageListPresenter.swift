@@ -10,8 +10,8 @@ import Foundation
 
 protocol ImageListPresenterProtocol: class {
     
-    func present(images: [TumblrImage])
-    func presentFailure()
+    func present(response: [Response])
+    func presentFailure(_ error: AppError)
 }
 
 class ImageListPresenter {
@@ -31,11 +31,21 @@ extension ImageListPresenter {
 //MARK: - Presenter Protocol
 extension ImageListPresenter: ImageListPresenterProtocol {
     
-    func presentFailure() {
+    func presentFailure(_ error: AppError) {
         
+        DispatchQueue.main.async {
+            self.view?.displayFailure(error)
+        }
     }
     
-    func present(images: [TumblrImage]) {
+    func present(response: [Response]) {
+        
+        var images: [TumblrImage] = []
+        for item in response {
+            if item.photos.count > 0 {
+                images.append(item.photos.first!.original_size)
+            }
+        }
         
         DispatchQueue.main.async {
             self.view?.display(images: images)

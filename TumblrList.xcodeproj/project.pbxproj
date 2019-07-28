@@ -32,6 +32,10 @@
 		06CED3C522EDBE7B005EDEC6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3C422EDBE7B005EDEC6 /* NetworkManager.swift */; };
 		06CED3C722EDBE8C005EDEC6 /* NetworkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3C622EDBE8C005EDEC6 /* NetworkModels.swift */; };
 		06CED3C922EDE638005EDEC6 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3C822EDE638005EDEC6 /* ApiService.swift */; };
+		06CED3CB22EE18EE005EDEC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3CA22EE18EE005EDEC6 /* UIImageView.swift */; };
+		06CED3CE22EE1937005EDEC6 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3CC22EE1937005EDEC6 /* ImageTableViewCell.swift */; };
+		06CED3CF22EE1937005EDEC6 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06CED3CD22EE1937005EDEC6 /* ImageTableViewCell.xib */; };
+		06CED3D122EE1A68005EDEC6 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CED3D022EE1A68005EDEC6 /* UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		06CED3C422EDBE7B005EDEC6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		06CED3C622EDBE8C005EDEC6 /* NetworkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModels.swift; sourceTree = "<group>"; };
 		06CED3C822EDE638005EDEC6 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		06CED3CA22EE18EE005EDEC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		06CED3CC22EE1937005EDEC6 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		06CED3CD22EE1937005EDEC6 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		06CED3D022EE1A68005EDEC6 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,8 @@
 			children = (
 				06CED39922EDAF6E005EDEC6 /* UIView.swift */,
 				06CED3BE22EDB4CC005EDEC6 /* UIColor.swift */,
+				06CED3CA22EE18EE005EDEC6 /* UIImageView.swift */,
+				06CED3D022EE1A68005EDEC6 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,6 +254,8 @@
 		06CED3AC22EDB095005EDEC6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				06CED3CC22EE1937005EDEC6 /* ImageTableViewCell.swift */,
+				06CED3CD22EE1937005EDEC6 /* ImageTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -350,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06CED3CF22EE1937005EDEC6 /* ImageTableViewCell.xib in Resources */,
 				06CED3BD22EDB2A4005EDEC6 /* SearchView.xib in Resources */,
 				06CED38622EDAD80005EDEC6 /* LaunchScreen.storyboard in Resources */,
 				06CED38322EDAD80005EDEC6 /* Assets.xcassets in Resources */,
@@ -369,7 +382,10 @@
 				06CED3AF22EDB0B6005EDEC6 /* ImageListViewController.swift in Sources */,
 				06CED39C22EDAF88005EDEC6 /* TableViewDataSource.swift in Sources */,
 				06CED3B122EDB0D5005EDEC6 /* ImageListDataSource.swift in Sources */,
+				06CED3D122EE1A68005EDEC6 /* UITableView.swift in Sources */,
 				06CED3C922EDE638005EDEC6 /* ApiService.swift in Sources */,
+				06CED3CE22EE1937005EDEC6 /* ImageTableViewCell.swift in Sources */,
+				06CED3CB22EE18EE005EDEC6 /* UIImageView.swift in Sources */,
 				06CED3C122EDB7ED005EDEC6 /* XibLoadable.swift in Sources */,
 				06CED39A22EDAF6E005EDEC6 /* UIView.swift in Sources */,
 				06CED3B322EDB105005EDEC6 /* ImageListPresenter.swift in Sources */,

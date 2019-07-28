@@ -33,15 +33,16 @@ extension ImageListInteractor: ImageListInteractorProtocol {
     
     func getData(searchText: String) {
         
-        apiService.getImages(searchText: /*searchText*/"lol") { (result) in
+        apiService.getImages(searchText: searchText) { [weak self] (result) in
+            guard let strongSelf = self else {
+                return
+            }
             switch result {
             case .success(let object):
-                break
+                strongSelf.presenter.present(response: object.response)
             case .failure(let error):
-                break
+                strongSelf.presenter.presentFailure(error)
             }
         }
-        let images: [TumblrImage] = [] // FIX ME: NetworkManager!!!
-        self.presenter.present(images: images)
     }
 }

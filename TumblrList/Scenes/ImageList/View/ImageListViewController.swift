@@ -11,7 +11,7 @@ import UIKit
 protocol ImageListViewProtocol: class {
     
     func display(images: [TumblrImage])
-    func displayFailure()
+    func displayFailure(_ error: AppError)
 }
 
 class ImageListViewController: BaseTableViewController {
@@ -34,8 +34,6 @@ class ImageListViewController: BaseTableViewController {
         super.viewDidLoad()
         
         self.configure()
-        
-        self.interactor.getData(searchText: "")
     }
     
     //MARK: Configuration
@@ -49,6 +47,7 @@ class ImageListViewController: BaseTableViewController {
     private func configureSearchView() {
         
         let searchView = SearchView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
+        searchView.delegate = self
         self.view.addSubview(searchView)
     }
     
@@ -56,7 +55,7 @@ class ImageListViewController: BaseTableViewController {
         
         self.tableView.backgroundColor = UIColor.white
         self.tableView.dataSource = self.dataSource
-        self.tableView.rowHeight = self.view.frame.height / 2 // FIX ME
+        self.tableView.rowHeight = 200 // FIX ME
         self.tableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         
         self.dataSource.registerRequiredCells(for: self.tableView)
@@ -87,8 +86,11 @@ extension ImageListViewController: ImageListViewProtocol {
         self.tableView.reloadData()
     }
     
-    func displayFailure() {
+    func displayFailure(_ error: AppError) {
         
+        self.images = []
+        self.dataSource.set(items: self.images)
+        self.tableView.reloadData()
     }
 }
 
@@ -97,5 +99,6 @@ extension ImageListViewController: SearchProtocol {
     
     func search(text: String) {
         
+        self.interactor.getData(searchText: text)
     }
 }
